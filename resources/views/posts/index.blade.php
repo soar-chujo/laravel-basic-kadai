@@ -8,6 +8,19 @@
 
     <body>
         <h1>投稿一覧</h1>
+
+        <table>
+            <tr>
+                <th>タイトル</th>
+                <th>本文</th>
+            </tr>
+            @foreach($products as $product)
+            <tr>
+                <td>{{ $product -> title }}</td>
+                <td>{{ $product -> content }}</td>
+            </tr>
+            @endforeach
+        </table>
     </body>
     
 </html>
